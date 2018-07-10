@@ -9,6 +9,12 @@ namespace Modelo
 {
     public class RegistroAsistenciaDAO
     {
+        private ORMDataContext orm;
+        public RegistroAsistenciaDAO()
+        {
+            this.orm = orm = new ORMDataContext();
+        }
+
         public void crearRegistroAcademico(int _idInfante, int _estadoInfante, DateTime _fecha, bool _asistencia)
         {
             byte asistencia_;
@@ -20,16 +26,23 @@ namespace Modelo
             {
                 asistencia_ = 0;
             }
-             
-            ORMDataContext orm = new ORMDataContext();
             RegistroAsistencia registroAsistencia = new RegistroAsistencia();
             registroAsistencia.idInfante = _idInfante;
             registroAsistencia.estadoInfante = _estadoInfante;
             registroAsistencia.fecha = _fecha;
             registroAsistencia.asistencia = asistencia_;
             registroAsistencia.habilitado = 1;
-            orm.RegistroAsistencia.InsertOnSubmit(registroAsistencia);
-            orm.SubmitChanges();
+            this.orm.RegistroAsistencia.InsertOnSubmit(registroAsistencia);
+            this.orm.SubmitChanges();
+        }
+
+        public bool validarFecha(DateTime _fecha, int _idInfante)
+        {
+            var resultado = (from ra in this.orm.RegistroAsistencia
+                             where ra.fecha.Equals(_fecha) && ra.idInfante.Equals(_idInfante)
+                             select ra).FirstOrDefault();
+            if (resultado != null) throw new Exception("Ya había registrado este infante el día de hoy");
+            return true;
         }
     }
 }

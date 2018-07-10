@@ -35,7 +35,8 @@ namespace Vista
             {
                 RegistroAsistenciaDAO registroAsistencia = new RegistroAsistenciaDAO();
                 DateTime dateTime = DateTime.Now;
-                if (dateTime.Hour < 8 || dateTime.Hour > 10) throw new Exception("La hora de registro de asistencia debe ser en las 8-10 de la mañana"); 
+                if (dateTime.Hour < 8 || dateTime.Hour > 10) throw new Exception("La hora de registro de asistencia debe ser en las 8-10 de la mañana");
+                registroAsistencia.validarFecha(DateTime.Parse(txtFecha.Text), int.Parse(ddlInfante.SelectedValue));
                 registroAsistencia.crearRegistroAcademico(int.Parse(ddlInfante.SelectedValue), int.Parse(ddlEstadoInfante.SelectedValue), DateTime.Parse(txtFecha.Text), cbxAsistencia.Checked);
                 Response.Write("<script>alert('El redistro ha sido almacenado Satisfactoriamente')</script>");
             }
