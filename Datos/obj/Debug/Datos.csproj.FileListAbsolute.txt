@@ -1,0 +1,7 @@
+A:\proyectos\C#\net\ICBF\Datos\bin\Debug\Datos.dll.config
+A:\proyectos\C#\net\ICBF\Datos\bin\Debug\Datos.dll
+A:\proyectos\C#\net\ICBF\Datos\bin\Debug\Datos.pdb
+A:\proyectos\C#\net\ICBF\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
+A:\proyectos\C#\net\ICBF\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+A:\proyectos\C#\net\ICBF\Datos\obj\Debug\Datos.dll
+A:\proyectos\C#\net\ICBF\Datos\obj\Debug\Datos.pdb

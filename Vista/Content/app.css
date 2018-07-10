@@ -1,0 +1,61 @@
+﻿:root {
+    --main-blue: #0054A4;
+    --main-yellow: #FDB913;
+    --main-red: #EF4135;
+    --main-green: #0FA16B;
+}
+
+.font-white {
+    color: #FFF;
+}
+
+aside, section {
+    display: inline-block;
+}
+
+#admin-bar a {
+    color: #FFF !important;
+    margin: 0 5px;
+    border-radius: 5px;
+    padding: 5px;
+    transition: background-color 0.3s linear;
+}
+
+#admin-bar a:hover {
+    background-color: #FFF;
+    color: var(--main-green) !important;
+}
+
+#admin-bar {
+    height: 1000px;
+    width: 20%;
+    background-color: var(--main-green);
+}
+
+#page-content {
+    height: 100px;
+    width: 80%;
+    float: right;
+    padding: 20px;
+}
+
+.btn-success, .bg-green {
+    background-color: var(--main-green) !important;
+}
+
+.btn-danger, .bg-red {
+    background-color: var(--main-red) !important;
+}
+
+.btn-info, .bg-blue, .btn-primary{
+    background-color: var(--main-blue) !important;
+}
+
+.btn-warning, .bg-yellow {
+    background-color: var(--main-yellow) !important;
+}
+
+.separator{
+    border: 1px solid #808080;
+    margin: 5px 0;
+}

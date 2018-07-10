@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PaginaMaster.master.cs" Inherits="Vista.PaginaMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title> ICBF | <asp:ContentPlaceHolder ID="Title" runat="server">Inicio</asp:ContentPlaceHolder></title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/app.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="Styles" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <main>
+        <form id="form1" runat="server"> 
+            <aside id="admin-bar">
+                <nav class="menu">
+                    <div class="header-nav">
+                      <h1 class="text-center font-white">ICBF</h1>
+                    </div>
+                    <div class="content-nav">
+                        <asp:Repeater ID="repeaterICBF" runat="server">
+                            <HeaderTemplate>
+                                <ul class="navbar-nav mr-auto">
+                            </HeaderTemplate>
+                            <ItemTemplate>
+                                <li class="nav-item">
+                                    <b>
+                                        <a href="<%# Eval("url") %>" class="nav-link"><%# Eval("accion") %></a>
+                                    </b>
+                                </li>
+                            </ItemTemplate>
+                            <FooterTemplate>
+                                </ul>
+                            </FooterTemplate>
+                        </asp:Repeater>
+                    </div>
+                  </nav>
+            </aside>
+            <section id="page-content">
+                <asp:ContentPlaceHolder ID="Content" runat="server"></asp:ContentPlaceHolder>
+            </section>
+        </form>
+    </main>
+    <script type="text/javascript" src="Scripts/jquery-3.0.0.min.js"></script>
+    <script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="Scripts/aplication.js"></script>
+    <asp:ContentPlaceHolder ID="Javascript" runat="server"></asp:ContentPlaceHolder>
+</body>
+</html>

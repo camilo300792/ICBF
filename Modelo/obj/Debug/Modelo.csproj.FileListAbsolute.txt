@@ -1,0 +1,10 @@
+A:\proyectos\C#\net\ICBF\Modelo\bin\Debug\Modelo.dll
+A:\proyectos\C#\net\ICBF\Modelo\bin\Debug\Modelo.pdb
+A:\proyectos\C#\net\ICBF\Modelo\bin\Debug\Datos.dll
+A:\proyectos\C#\net\ICBF\Modelo\bin\Debug\Datos.pdb
+A:\proyectos\C#\net\ICBF\Modelo\bin\Debug\Datos.dll.config
+A:\proyectos\C#\net\ICBF\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
+A:\proyectos\C#\net\ICBF\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+A:\proyectos\C#\net\ICBF\Modelo\obj\Debug\Modelo.csproj.CopyComplete
+A:\proyectos\C#\net\ICBF\Modelo\obj\Debug\Modelo.dll
+A:\proyectos\C#\net\ICBF\Modelo\obj\Debug\Modelo.pdb
